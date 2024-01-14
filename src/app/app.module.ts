@@ -16,6 +16,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './infra/infra-adapters/pages/home/home.component';
 import { HeaderComponent } from './core/adapters/components/header/header.component';
 import { SideMenuComponent } from './core/adapters/components/side-menu/side-menu.component';
+import { FooterComponent } from './core/adapters/components/footer/footer.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SideMenuComponent } from './core/adapters/components/side-menu/side-men
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
