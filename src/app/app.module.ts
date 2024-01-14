@@ -14,13 +14,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ToastrModule } from 'ngx-toastr';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './infra/infra-adapters/pages/home/home.component';
+import { HeaderComponent } from './core/adapters/components/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
