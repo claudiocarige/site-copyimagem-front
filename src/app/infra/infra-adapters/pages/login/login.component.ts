@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormControl, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Credentials } from 'src/app/core/entities/credentials';
 
 @Component({
@@ -9,10 +10,12 @@ import { Credentials } from 'src/app/core/entities/credentials';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  cred: Credentials = {
-    email:    '',
-    password: ''
-  }
+
+
+  private formBuilderService = inject(FormBuilder);
+  private route = inject(Router);
+  private toast = inject(ToastrService);
+
 
   email = new FormControl('', [
     Validators.required,
@@ -24,19 +27,14 @@ export class LoginComponent {
     Validators.minLength(8),
   ]);
 
-  constructor(
-    private route: Router,
-
-  ) { }
-
-  ngOnInit(): void {
-  }
+  constructor() {}
 
   login() {
-
+    console.log(this.password.value, this.email.value);
+    this.route.navigate(['home']);
   }
 
   validation(): boolean {
-      return this.email.valid && this.password.valid;
+      return this.email.valid && this.password.valid;;
   }
 }

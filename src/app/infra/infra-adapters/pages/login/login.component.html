@@ -14,12 +14,12 @@
           <img src="../../../../../assets/img/LogoCopyImagem.png" alt="Imagem da logo marca da empresa CopyYmagem que remete a varios quadrados um emcima do outro">
           <mat-form-field class="full-width" appearance="fill">
               <mat-label>E-mail</mat-label>
-              <input (ngModel)="cred.email" name="email" (formControl)="email" required matInput
+              <input [formControl]="email"  type="email" name="email" [formControl]="email" required matInput
               placeholder="Ex. fulano@mail.com">
           </mat-form-field>
           <mat-form-field class="full-width" appearance="fill">
               <mat-label>Senha</mat-label>
-              <input (ngModel)="cred.password" name="password" type="password" (formControl)="password" required
+              <input [formControl]="password" name="password" type="password" [formControl]="password" required
               matInput placeholder="Ex. 123456">
           </mat-form-field>
           <button (click)="login()" [disabled]="!validation()" class="full-width btn-login mat-elevation-z4"

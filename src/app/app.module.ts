@@ -11,12 +11,16 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ToastrModule } from 'ngx-toastr';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './infra/infra-adapters/pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,10 +29,20 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTableModule,
     MatInputModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
 
+
+ToastrModule.forRoot({
+      easeTime: 500,
+      timeOut: 3200,
+      positionClass:  'toast-top-right',
+      closeButton: true
+   })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[]
 })
 export class AppModule { }
