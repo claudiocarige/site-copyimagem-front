@@ -15,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './infra/infra-adapters/pages/home/home.component';
 import { HeaderComponent } from './core/adapters/components/header/header.component';
+import { SideMenuComponent } from './core/adapters/components/side-menu/side-menu.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeaderComponent } from './core/adapters/components/header/header.compon
     AppComponent,
     LoginComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,
