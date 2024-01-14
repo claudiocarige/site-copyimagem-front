@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Credentials } from 'src/app/core/entities/credentials';
+import { Credentials } from 'src/app/core/models/credentials';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +28,6 @@ export class LoginComponent {
   ]);
 
   constructor() {}
-
   login() {
     console.log(this.password.value, this.email.value);
     this.route.navigate(['home']);
