@@ -11,6 +11,10 @@ import { Credentials } from 'src/app/core/models/credentials';
 })
 export class LoginComponent {
 
+  cred: Credentials = {
+    email:'',
+    password:''
+  }
 
   private formBuilderService = inject(FormBuilder);
   private route = inject(Router);
