@@ -11,14 +11,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ToastrModule } from 'ngx-toastr';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './infra/infra-adapters/pages/home/home.component';
 import { HeaderComponent } from './core/adapters/components/header/header.component';
 import { SideMenuComponent } from './core/adapters/components/side-menu/side-menu.component';
 import { FooterComponent } from './core/adapters/components/footer/footer.component';
-import { ListClientesComponent } from './core/adapters/components/list-clientes/list-clientes.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ListClientesComponent } from './core/adapters/components/cliente/list-clientes/list-clientes.component';
+import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CreateClienteComponent } from './core/adapters/components/cliente/create-cliente/create-cliente.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HeaderComponent,
     SideMenuComponent,
     FooterComponent,
-    ListClientesComponent
+    ListClientesComponent,
+    CreateClienteComponent
   ],
   imports: [
     BrowserModule,
