@@ -13,8 +13,8 @@ export class ClienteService {
 
   constructor() { }
 
-  findAll(): Observable<Cliente>{
-    let clientes = this.http.get<Cliente>(`${API_URL.urlBase}/api/v1/cliente`);
+  findAll(): Observable<Cliente[]>{
+    let clientes = this.http.get<Cliente[]>(`${API_URL.urlBase}/api/v1/client`);
     return clientes;
   }
 }
