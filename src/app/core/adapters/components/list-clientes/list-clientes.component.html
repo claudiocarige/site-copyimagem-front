@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Lista de Clientes</h2>
+  <div class="tabela mat-elevation-z8 paginator-fluid">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="nomeCliente">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.nomeCliente}} </td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> E-mail </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef> Telefone </th>
+        <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+      </ng-container>
+      <ng-container matColumnDef="whatsapp">
+        <th mat-header-cell *matHeaderCellDef> Whatsapp </th>
+        <td mat-cell *matCellDef="let element"> {{element.whatsapp}} </td>
+      </ng-container>
+      <ng-container matColumnDef="inicioContrato">
+        <th mat-header-cell *matHeaderCellDef> Inicio Contrato </th>
+        <td mat-cell *matCellDef="let element"> {{element.inicioContrato}} </td>
+      </ng-container>
+      <ng-container matColumnDef="situacaoFinanceira">
+        <th mat-header-cell *matHeaderCellDef> Situacao Financeira </th>
+        <td mat-cell *matCellDef="let element"> {{element.situacaoFinanceira}} </td>
+      </ng-container>
+      <ng-container matColumnDef="cpf">
+        <th mat-header-cell *matHeaderCellDef> CPF </th>
+        <td mat-cell *matCellDef="let element"> {{element.cpf || "-------" }} </td>
+      </ng-container>
+      <ng-container matColumnDef="cnpj">
+        <th mat-header-cell *matHeaderCellDef> CNPJ </th>
+        <td mat-cell *matCellDef="let element"> {{element.cnpj || "-------" }} </td>
+      </ng-container>
+    <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td mat-cell *matCellDef="let element">
+
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+
+</div>
