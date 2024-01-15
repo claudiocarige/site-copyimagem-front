@@ -18,6 +18,7 @@ import { SideMenuComponent } from './core/adapters/components/side-menu/side-men
 import { FooterComponent } from './core/adapters/components/footer/footer.component';
 import { ListClientesComponent } from './core/adapters/components/list-clientes/list-clientes.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatPaginatorModule,
 
 
 ToastrModule.forRoot({
