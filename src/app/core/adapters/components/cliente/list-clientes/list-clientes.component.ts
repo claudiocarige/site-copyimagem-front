@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { ClienteService } from 'src/app/core/use-cases/services/service-cliente/cliente.service';
-import { Cliente } from './../../../models/modelCliente';
+import { Cliente } from '../../../../models/modelCliente';
 import { ClientePF } from 'src/app/core/models/modelClientePF';
 import { ClientePJ } from 'src/app/core/models/modelClientePJ';
 import { MatTableDataSource } from '@angular/material/table';
-import {MatPaginator} from '@angular/material/paginator';
+import { MatPaginator} from '@angular/material/paginator';
 
 
 @Component({
