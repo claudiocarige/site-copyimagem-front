@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './infra/infra-adapters/pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
@@ -17,6 +16,8 @@ import { HomeComponent } from './infra/infra-adapters/pages/home/home.component'
 import { HeaderComponent } from './core/adapters/components/header/header.component';
 import { SideMenuComponent } from './core/adapters/components/side-menu/side-menu.component';
 import { FooterComponent } from './core/adapters/components/footer/footer.component';
+import { ListClientesComponent } from './core/adapters/components/list-clientes/list-clientes.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FooterComponent } from './core/adapters/components/footer/footer.compon
     HomeComponent,
     HeaderComponent,
     SideMenuComponent,
-    FooterComponent
+    FooterComponent,
+    ListClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { FooterComponent } from './core/adapters/components/footer/footer.compon
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
 
 ToastrModule.forRoot({
